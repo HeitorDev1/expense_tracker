@@ -1,0 +1,88 @@
+.register_page {
+    background-color: white;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.star {
+  color: purple;
+  margin: 0 10px;
+}
+
+.expense_title {
+    font-size: 32px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    align-items: center;
+    font-weight: 600;
+}
+
+.register_title {
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    font-size: 24px;
+    color: #333;
+}
+
+.register_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 14px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.input {
+    width: 250px;
+    padding: 10px 35px 10px 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: 0.2s;
+    font-size: 14px;
+}
+
+.input:focus {
+    border-color: purple;
+    box-shadow: 0 0 0 2px rgba(128, 0, 128, 0.1);
+}
+
+.password_wrapper {
+  position: relative;
+}
+
+.eye_button {
+    position: absolute;
+    right: 10px;
+    top: 58%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #555;
+    font-size: 18px;
+}
+
+.register_button {
+    width: 250px;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: purple;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.register_button:hover {
+    background-color: #6a0dad;
+}
+
+.register_button:active {
+    transform: scale(0.97);
+}

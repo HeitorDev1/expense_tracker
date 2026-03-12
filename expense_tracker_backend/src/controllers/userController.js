@@ -1,12 +1,30 @@
 import registerService from "../services/registerService.js";
+import loginService from "../services/loginService.js";
 
-const registerUser = (req, res) => {
+export const registerUser = (req, res) => {
 
     const { email, password } = req.body;
 
-    registerService(email, password);
+    registerService(email, password, (err, result) => {
 
-    res.status(201).json({ message: "Usuário criado" });
+        if (err) {
+            return res.status(400).json(err);
+        }
+
+        res.status(201).json(result);
+    });
 };
 
-export default registerUser;
+export const loginUser = (req, res) => {
+
+    const { email, password } = req.body;
+
+    loginService(email, password, (err, result) => {
+
+        if (err) {
+            return res.status(401).json(err);
+        }
+
+        res.json(result);
+    });
+};
